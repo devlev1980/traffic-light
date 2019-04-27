@@ -1,0 +1,11 @@
+<div class="container">
+  <div class="traffic_light">
+    <div class="red" [ngClass]="{'active': activeRed}"></div>
+    <div class="yellow" [ngClass]="{'active':activeYellow}"></div>
+    <div class="green" [ngClass]="{'active':activeGreen}"></div>
+  </div>
+  <div class="actions">
+    <button class="start-btn" (click)="startTraffic()">Start</button>
+    <button class="stop-btn" (click)="stopTrafficLight()">Stop</button>
+  </div>
+</div>
