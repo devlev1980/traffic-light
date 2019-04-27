@@ -26,7 +26,7 @@ export class HomeComponent implements OnInit {
       this.activeRed = true;
       this.activeYellow = false;
       this.activeGreen = false;
-    }, 200);
+    }, 1000);
 
     this.timeOut2 = setTimeout(() => {
       this.activeRed = true;
@@ -41,6 +41,7 @@ export class HomeComponent implements OnInit {
 
     this.timeOut4 = setTimeout(() => {
       this.activeGreen = false;
+      this.activeYellow = true;
       this.ngOnInit();
     }, 9000);
   }
