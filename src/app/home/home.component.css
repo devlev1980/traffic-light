@@ -4,7 +4,13 @@
   height: 600px;
   margin: 10% auto;
   position: relative;
-  overflow: hidden;
+  overflow: visible;
+  -webkit-box-shadow: 1px 2px 12px -1px rgba(0,0,0,0.75);
+  -moz-box-shadow: 1px 2px 12px -1px rgba(0,0,0,0.75);
+  box-shadow: 1px 2px 12px -1px rgba(0,0,0,0.75);
+  background: #3d2f66;
+  border-radius: 10px;
+
 }
 .traffic_light{
   width: 390px;
@@ -65,7 +71,7 @@
 .actions{
   position: absolute;
   bottom: 10px;
-  left: 27%;
+  left: 50%;
   width: 100%;
 }
 .start-btn,.stop-btn{
@@ -88,3 +94,25 @@
   background: red;
   color: white;
 }
+.dropdown{
+  position: absolute;
+  bottom: 10px;
+  left:15px;
+}
+.dropdown-menu.show{
+  background: #063967;
+
+}
+.dropdown-menu.show a{
+  color: white;
+}
+.dropdown-menu.show a:hover{
+  color:#063967;
+}
+.btn-secondary{
+  background: #063967;
+}
+.btn-secondary.dropdown-toggle{
+  background: #063967;
+}
+

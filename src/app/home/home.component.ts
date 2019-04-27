@@ -13,12 +13,19 @@ export class HomeComponent implements OnInit {
   timeOut2;
   timeOut3;
   timeOut4;
+  selectOptions: Array<string> = [
+    'Red',
+    'Yellow',
+    'Green',
+    'Not Started'
+  ];
 
   constructor() {
   }
 
   ngOnInit() {
     this.startTraffic();
+
   }
 
   startTraffic() {
@@ -55,6 +62,34 @@ export class HomeComponent implements OnInit {
 
   }
 
+  onChange(event) {
+    console.log(event);
+    this.stopTrafficLight();
+
+    switch (event.target.outerText) {
+      case 'Red':
+        this.activeRed = true;
+        this.activeYellow = false;
+        this.activeGreen = false;
+        break;
+      case 'Yellow':
+        this.activeRed = false;
+        this.activeYellow = true;
+        this.activeGreen = false;
+        break;
+      case 'Green':
+        this.activeRed = false;
+        this.activeYellow = false;
+        this.activeGreen = true;
+        break;
+      case 'Not Started':
+        this.activeRed = false;
+        this.activeYellow = false;
+        this.activeGreen = false;
+        break;
+    }
+
+  }
 
 
 }
